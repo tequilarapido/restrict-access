@@ -10,16 +10,6 @@
 </p>
 
 
-## Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Changelog](#changelog)
-- [Testing](#testing)
-- [Security](#security)
-- [Contributing](#contributing)
-- [Credits](#credits)
-- [License](#license)
 
 
 ## Installation
