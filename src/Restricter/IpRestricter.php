@@ -13,7 +13,7 @@ class IpRestricter extends Restricter
      */
     public function isRestrictionEnabled()
     {
-        return config('restric_access.by_ip.enabled');
+        return config('restrict_access.by_ip.enabled');
     }
 
 
@@ -27,6 +27,7 @@ class IpRestricter extends Restricter
         if(!$this->isRestrictionEnabled()) {
             return false;
         }
+
 
         if (!$this->isAllowed($this->getClientIp())) {
             return $this->getNotAllowedResponse();

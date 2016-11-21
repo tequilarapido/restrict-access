@@ -32,28 +32,31 @@ $ composer require tequilarapido/restrict-access
 
 ## Usage
 
-
-## Changelog
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
+- Add service provider
+```
+Tequilarapido\RestrictAccess\ServiceProvider::class,
 ```
 
-## Security
+- Add middlewares to kernel  
+```
+protected $routeMiddleware = [
+        'restrict_access_by_ip' => RestrictAccessByIp::class,
+        'restrict_access_by_basic_auth' => RestrictAccessByBasicAuthentication::class,
+    ];
+```
 
-If you discover any security related issues, please email :author_email instead of using the issue tracker.
+- Add middleware to routes on witch you need to restrict access
 
-## Contributing
+- Env file  
+```
+RESTRICT_ACCESS_BY_BASIC_AUTH_ENABLED=true
+RESTRICT_ACCESS_BY_BASIC_AUTH_usename=username
+RESTRICT_ACCESS_BY_BASIC_AUTH_password=password
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+RESTRICT_ACCESS_BY_IP_ENABLED=false
+RESTRICT_ACCESS_BY_IP_ENABLED_EXCEPT=a,b,c
+```
 
-## Credits
-
-- [Nassif Bourguig](https://github.com/nbourguig)
-- [All Contributors](../../contributors)
 
 ## License
 

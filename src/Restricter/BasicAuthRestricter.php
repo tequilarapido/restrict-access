@@ -21,7 +21,7 @@ class BasicAuthRestricter extends Restricter
      */
     public function restrict()
     {
-        if (!$this->isRestrictionNeeded()) {
+        if (!$this->isRestrictionEnabled()) {
             return false;
         }
 
