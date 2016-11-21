@@ -37,7 +37,6 @@ trait IpHelper
         return false;
     }
 
-
     /**
      * Returns allowed Ips from config.
      *
@@ -53,7 +52,7 @@ trait IpHelper
             $allowedIps = $this->commaSepratedValues($allowedIps);
         }
 
-        if (!is_array($allowedIps) || empty($allowedIps)) {
+        if (! is_array($allowedIps) || empty($allowedIps)) {
             throw new \Exception('restrict_access.by_ip.except is required and must be an array of Ips and/or Ip ranges');
         }
 
@@ -107,7 +106,7 @@ trait IpHelper
 
     private function commaSepratedValues($csv, $trim = true)
     {
-        $items = !empty($csv) && is_string($csv)
+        $items = ! empty($csv) && is_string($csv)
             ? explode(',', $csv)
             : [];
 
