@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tequilarapido/restrict-access.svg?style=flat-square)](https://packagist.org/packages/tequilarapido/restrict-access)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![StyleCI](https://styleci.io/repos/$STYLECI_ID$/shield)](https://styleci.io/repos/$STYLECI_ID$)
+[![StyleCI](https://styleci.io/repos/74390323/shield)](https://styleci.io/repos/74390323)
 [![Quality Score](https://img.shields.io/scrutinizer/g/tequilarapido/restrict-access.svg?style=flat-square)](https://scrutinizer-ci.com/g/tequilarapido/restrict-access)
 
 <p align="center">
