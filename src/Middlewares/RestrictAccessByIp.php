@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Tequilarapido\RestrictAccess\Middlewares;
 
 use Closure;

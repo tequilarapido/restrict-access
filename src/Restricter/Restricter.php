@@ -25,5 +25,4 @@ abstract class Restricter
      * @return mixed
      */
     abstract public function restrict();
-
 }

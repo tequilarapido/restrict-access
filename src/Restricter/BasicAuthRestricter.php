@@ -21,11 +21,11 @@ class BasicAuthRestricter extends Restricter
      */
     public function restrict()
     {
-        if (!$this->isRestrictionEnabled()) {
+        if (! $this->isRestrictionEnabled()) {
             return false;
         }
 
-        if (!$this->attempt()) {
+        if (! $this->attempt()) {
             return $this->getBasicAuthenticationResponse();
         }
 
@@ -83,7 +83,7 @@ class BasicAuthRestricter extends Restricter
     protected function tryToSetAuthPHPFrom($header)
     {
         if (
-            !empty($_SERVER[$header])
+            ! empty($_SERVER[$header])
             && preg_match('/Basic\s+(.*)$/i', $_SERVER[$header], $auth_matches)
         ) {
             $auth_items = isset($auth_matches[1]) ? explode(':', base64_decode($auth_matches[1])) : [];

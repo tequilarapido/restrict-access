@@ -10,7 +10,7 @@ return [
 
     'by_ip' => [
         'enabled' => env('RESTRICT_ACCESS_BY_IP_ENABLED', false),
-        'except' => env('RESTRICT_ACCESS_BY_IP_ENABLED_EXCEPT')
+        'except' => env('RESTRICT_ACCESS_BY_IP_ENABLED_EXCEPT'),
     ],
 
 ];
